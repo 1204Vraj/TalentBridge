@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getJobs } from '../services/api';
-import { Job } from '../types';
 import { MapPin, Building2, Clock } from 'lucide-react';
 
 function JobList() {
-  const [jobs, setJobs] = useState<Job[]>([]);
+  const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
