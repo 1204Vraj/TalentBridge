@@ -20,8 +20,7 @@ function Login() {
     validationSchema: LoginSchema,
     onSubmit: async (values) => {
       try {
-        const response = await login(values.email, values.password);
-        // Handle successful login
+        await login(values.email, values.password);
         navigate('/');
       } catch (error) {
         console.error('Login failed:', error);
