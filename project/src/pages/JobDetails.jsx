@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getJobById, applyForJob } from '../services/api';
-import { Job } from '../types';
 import { MapPin, Building2, Clock, Calendar, ExternalLink } from 'lucide-react';
 
 function JobDetails() {
-  const { id } = useParams<{ id: string }>();
-  const [job, setJob] = useState<Job | null>(null);
+  const { id } = useParams();
+  const [job, setJob] = useState(null);
   const [loading, setLoading] = useState(true);
   const [applying, setApplying] = useState(false);
 
@@ -32,8 +31,7 @@ function JobDetails() {
 
     setApplying(true);
     try {
-      // Replace 1 with actual user ID from auth context
-      await applyForJob(job.id, 1);
+      await applyForJob(job.id, 1); // Replace 1 with actual user ID from auth context
       alert('Application submitted successfully!');
     } catch (error) {
       console.error('Failed to submit application:', error);
@@ -62,10 +60,8 @@ function JobDetails() {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="bg-white rounded-lg shadow-md p-8">
-        {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">{job.title}</h1>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex items-center text-gray-600">
               <Building2 className="w-5 h-5 mr-2" />
@@ -86,7 +82,6 @@ function JobDetails() {
           </div>
         </div>
 
-        {/* Apply Button */}
         <div className="mb-8">
           <button
             onClick={handleApply}
@@ -101,7 +96,6 @@ function JobDetails() {
           </button>
         </div>
 
-        {/* Description */}
         <div className="mb-8">
           <h2 className="text-xl font-semibold mb-4">Job Description</h2>
           <div className="prose max-w-none">
@@ -113,7 +107,6 @@ function JobDetails() {
           </div>
         </div>
 
-        {/* Requirements */}
         <div className="mb-8">
           <h2 className="text-xl font-semibold mb-4">Requirements</h2>
           <ul className="list-disc list-inside space-y-2">
@@ -125,7 +118,6 @@ function JobDetails() {
           </ul>
         </div>
 
-        {/* Company Info */}
         <div>
           <h2 className="text-xl font-semibold mb-4">About the Company</h2>
           <div className="bg-gray-50 p-6 rounded-lg">
