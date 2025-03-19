@@ -23,7 +23,7 @@ function Welcome() {
                         Find Your Dream Job or Post Your Opportunity Today!
                     </h1>
                     <p className="text-lg mb-6">
-                        Jobify connects professionals and employers seamlessly.
+                        TalentBridge connects professionals and employers seamlessly.
                     </p>
                     <div className="flex justify-center space-x-4">
                         <button className="px-6 py-3 text-indigo-600 bg-white font-medium rounded-md shadow-sm hover:bg-gray-100"
@@ -41,7 +41,7 @@ function Welcome() {
             {/* Key Features Section */}
             <section className="py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Jobify?</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose TalentBridge?</h2>
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                         <div className="p-6 bg-white rounded-lg shadow-md">
                             <Users className="h-10 w-10 text-indigo-600 mx-auto" />
@@ -76,7 +76,7 @@ function Welcome() {
                         <div className="p-6 bg-white rounded-lg shadow-md">
                             <Heart className="h-10 w-10 text-red-600 mx-auto" />
                             <p className="mt-4 text-sm text-gray-700">
-                                {"Jobify helped me land my dream role in just a week!"}
+                                {"TalentBridge helped me land my dream role in just a week!"}
                             </p>
                             <h3 className="mt-2 font-medium text-gray-900">- Priya Sharma</h3>
                         </div>
@@ -102,7 +102,7 @@ function Welcome() {
             <footer className="bg-gray-900 text-white py-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-sm">&copy; 2025 Jobify. All rights reserved.</p>
+                        <p className="text-sm">&copy; 2025 TalentBridge. All rights reserved.</p>
                         <div className="flex space-x-4 mt-4 md:mt-0">
                             <a href="#" className="text-sm hover:text-indigo-400">Privacy Policy</a>
                             <a href="#" className="text-sm hover:text-indigo-400">Terms of Service</a>
